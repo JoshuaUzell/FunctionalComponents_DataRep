@@ -4,11 +4,12 @@ import axios from "axios";
 
 export class Read extends React.Component{
     
-    
+    //Excecutes when component starts
+    //Gets data back
     componentDidMount() {
         axios.get('http://localhost:4000/api/books')
         .then((response)=>{
-            this.setState({books:response.data.myBooks})
+            this.setState({books:response.data})
         })
         .catch((error)=>{
             console.log(error);
