@@ -4,6 +4,7 @@ import './App.css';
 import { Content } from './components/content';
 import { Footer } from './components/footer';
 import { Header } from './components/header';
+import { FCreate } from './components/fcreate'; //Import fcreate
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -27,6 +28,7 @@ class App extends React.Component {
               <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="/read">Read</Nav.Link>
               <Nav.Link href="/create">Create</Nav.Link>
+              <Nav.Link href="/fun">FUN</Nav.Link> {/*Shows in the GUI at the front end*/}
             </Nav>
           </Container>
         </Navbar>
@@ -34,6 +36,7 @@ class App extends React.Component {
         <Route path='/' element={<Content></Content>}></Route>
         <Route path='/read' element={<Read></Read>}></Route>
         <Route path='/create' element={<Create></Create>}></Route>
+        <Route path='/fun' element={<FCreate></FCreate>}></Route> {/*This creates a new route for fCreate*/} 
       </Routes>
         {/* <Header></Header>
         <Content></Content>
